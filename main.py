@@ -123,3 +123,8 @@ def main(page: fl.Page):
 fl.app(target=main)
 
 # https://www.youtube.com/watch?v=JJCjAUmNXBs
+
+# page.navigation_bar.destinations.pop(0) убрать кнопку авторизации при переходе в ЛК
+#             page.navigation_bar.destinations.pop(0)
+#             page.clean()
+#             page.add(panel_cabine)
