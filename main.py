@@ -6,8 +6,8 @@ def main(page: fl.Page):
     page.theme_mode = 'dark'
     page.vertical_alignment = fl.MainAxisAlignment.CENTER
 
-    page.window.width = 600
-    page.window.height = 400
+    page.window.width = 400
+    page.window.height = 500
     page.window_resizable = False
 
 
@@ -64,13 +64,24 @@ def main(page: fl.Page):
 
 
     def navigate(event):
-      pass
+      page.clean()
+      
+      if page.navigation_bar.selected_index == 0:
+        page.add(panel_register)
+        
+      elif page.navigation_bar.selected_index == 1:
+        page.add(panel_auth)
+        
     
     
     user_login_field = fl.TextField(label='Имя пользователя', width=200, on_change=validate)
     user_password_field = fl.TextField(label='Пароль', width=200, on_change=validate)
-    confirm_reg_button = fl.OutlinedButton(text='Подтвердить', disabled=True, on_click=register)
-    confirm_auth_button = fl.OutlinedButton(text='Войти', disabled=True, on_click=authorization)
+    confirm_reg_button = fl.OutlinedButton(text='Подтвердить', width=200, disabled=True, on_click=register)
+    confirm_auth_button = fl.OutlinedButton(text='Войти', width=200, disabled=True, on_click=authorization)
+    
+    panel_start = fl.Row(
+          [fl.Text('Добро пожаловать в YourApp!')], alignment=fl.MainAxisAlignment.CENTER
+        )
     
     panel_register = fl.Row(
             [
@@ -107,7 +118,7 @@ def main(page: fl.Page):
       ], on_change=navigate
     )
     
-    page.add(panel_auth)
+    page.add(panel_start)
 
 fl.app(target=main)
 
