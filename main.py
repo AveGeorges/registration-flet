@@ -39,7 +39,7 @@ def main(page: fl.Page):
             confirm_auth_button.disabled = False
         else:
             confirm_reg_button.disabled = True
-            confirm_auth_button.disabled = False
+            confirm_auth_button.disabled = True
         page.update()
         
 
