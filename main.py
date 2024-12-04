@@ -15,7 +15,7 @@ def main(page: fl.Page):
         db = sqlite3.connect('myusers.db')
         cursor = db.cursor()
         cursor.execute("""CREATE TABLE IF NOT EXISTS users (
-                            id INEGER PRIMARY KEY,
+                            id INTEGER PRIMARY KEY,
                             login TEXT,
                             password TEXT
                        )""")
