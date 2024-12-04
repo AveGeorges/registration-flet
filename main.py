@@ -52,6 +52,8 @@ def main(page: fl.Page):
         if user_data != None:
             user_login_field.value = ''
             user_password_field.value = ''
+            page.snack_bar = fl.SnackBar(fl.Text('Вы успешно вошли!'))
+            page.snack_bar.open = True
             page.update()
         else:
             page.snack_bar = fl.SnackBar(fl.Text('Введены неверные данные'))
