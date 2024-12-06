@@ -130,3 +130,5 @@ fl.app(target=main)
 #             page.navigation_bar.destinations.pop(0)
 #             page.clean()
 #             page.add(panel_cabine)
+
+# https://translated.turbopages.org/proxy_u/en-ru.ru.7f1852d0-67531e7a-978fdb24-74722d776562/https/www.geeksforgeeks.org/implement-a-stack-using-singly-linked-list/
